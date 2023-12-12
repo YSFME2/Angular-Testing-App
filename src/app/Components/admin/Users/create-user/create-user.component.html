@@ -1,0 +1,9 @@
+<div class="row">
+  <input type="text" placeholder="Name" class="col-sm mx-1 form-control" [(ngModel)]="name"/>
+  <select name="gender" title="gender" [(ngModel)]="gender" class="col-sm mx-1 form-select">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+  <input type="number" placeholder="Age" [(ngModel)]="age" class="col-sm mx-1 form-control">
+</div>
+<button class="btn btn-primary my-1" (click)="CreateUser()">Create New User</button>

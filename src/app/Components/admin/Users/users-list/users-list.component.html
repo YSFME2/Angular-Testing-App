@@ -1,0 +1,21 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of Users">
+      <td>{{user.Name}}</td>
+      <td>{{user.Gender}}</td>
+      <td>{{user.Age}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="RemoveById(user)" >Remove</button>
+        <button class="btn btn-primary" (click)="ShowUser(user)">Show</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
