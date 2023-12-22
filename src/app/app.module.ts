@@ -15,6 +15,7 @@ import { UsersService } from './Services/users.service';
 import { UsersListComponent } from './Components/admin/Users/users-list/users-list.component';
 import { FormsModule } from '@angular/forms';
 import { UserDetailsComponent } from './Components/admin/Users/user-details/user-details.component';
+import { DeleteUserConfirmComponent } from './Components/admin/Users/delete-user-confirm/delete-user-confirm.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { UserDetailsComponent } from './Components/admin/Users/user-details/user
     HeaderComponent,
     UsersListComponent,
     UserDetailsComponent,
+    DeleteUserConfirmComponent,
   ],
   imports: [
     BrowserModule,

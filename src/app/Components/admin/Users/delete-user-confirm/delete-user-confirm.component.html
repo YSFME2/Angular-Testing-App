@@ -1,0 +1,18 @@
+<div class="modal123">
+  <div class="modal123-content card">
+    <div class="card-header">
+      <h2>Delete User</h2>
+      <button class="close" (click)="OnDeleteConfirmed(false)">&times;</button>
+    </div>
+    <div class="card-body">
+      <h2>Do you want to delete user : "{{UserToDelete?.Name}}"</h2>
+    </div>
+    <div class="card-footer">
+      <div class="row column-gap-3 justify-content-end">
+        <button (click)="OnDeleteConfirmed(true)" class="btn btn-danger col-auto">DELETE</button>
+        <button (click)="OnDeleteConfirmed(false)" class="btn btn-outline-primary col-auto">CANCEL</button>
+      </div>
+    </div>
+  </div>
+</div>
+

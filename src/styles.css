@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+.modal123 {
+  position: fixed;
+  z-index: 1;
+  padding-top: 200px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.modal123-content {
+  margin: auto;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  background-color: transparent
+}
+
+.close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close:focus {
+  color: #888;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-header {
+  display: flex;
+}
+
+.card-header h2 {
+  width: 100%;
+}

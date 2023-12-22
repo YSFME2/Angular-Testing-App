@@ -1,0 +1,18 @@
+{
+  "apiKey": "AIzaSyCkbRv2jMHEhPBWAhq5BemwED-iQQg2OyY",
+  "authDomain": "youssef-f0f89.firebaseapp.com",
+  "databaseURL": "https://youssef-f0f89.firebaseio.com",
+  "projectId": "youssef-f0f89",
+  "storageBucket": "youssef-f0f89.appspot.com",
+  "messagingSenderId": "427683817592",
+  "appId": "1:427683817592:web:e692a8a7a6694b1818e58d",
+  "measurementId": "G-VRBK3ESYJE",
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

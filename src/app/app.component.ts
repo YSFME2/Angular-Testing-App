@@ -7,7 +7,12 @@ import { Display } from './Models/Enums/Display';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'testing2';
+  // title = 'testing2';
+  // public DisplayTypes = Display;
+  /**
+   *
+   */
+  constructor() {
 
-  public DisplayTypes = Display;
+  }
 }

@@ -1,7 +1,19 @@
-<div class="card-footer" *ngIf="User">
-  <div class="row">
-    <h2>{{User.Name}}</h2>
-    <h4>Gender : <b> {{User.Gender}}</b></h4>
-    <h4>Age : <b>{{User.Age}} </b></h4>
+<div class="modal123" *ngIf="User">
+  <div class="modal123-content card">
+    <div class="card-header">
+      <h2>User Details</h2>
+      <button class="close" (click)="OnClose()">&times;</button>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <h2>{{ User.Name }}</h2>
+        <h4>
+          Gender : <b> {{ User.Gender }}</b>
+        </h4>
+        <h4>
+          Age : <b>{{ User.Age }} </b>
+        </h4>
+      </div>
+    </div>
   </div>
 </div>

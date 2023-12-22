@@ -9,13 +9,22 @@
   </thead>
   <tbody>
     <tr *ngFor="let user of Users">
-      <td>{{user.Name}}</td>
-      <td>{{user.Gender}}</td>
-      <td>{{user.Age}}</td>
-      <td>
-        <button class="btn btn-danger" (click)="RemoveById(user)" >Remove</button>
-        <button class="btn btn-primary" (click)="ShowUser(user)">Show</button>
+      <td>{{ user.Name }}</td>
+      <td>{{ user.Gender }}</td>
+      <td>{{ user.Age }}</td>
+      <td class="row column-gap-3">
+        <button class="btn btn-danger col-auto" (click)="RemoveById(user)">
+          Remove
+        </button>
+        <button class="btn btn-primary col-auto" (click)="ShowUser(user)">Show</button>
       </td>
     </tr>
   </tbody>
 </table>
+
+<ng-template #container></ng-template>
+<app-delete-user-confirm
+  *ngIf="userToDelete"
+  [UserToDelete]="userToDelete"
+  (ConfirmDelete)="ConfirmRemoveUser($event)"
+></app-delete-user-confirm>
