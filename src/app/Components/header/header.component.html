@@ -1,1 +1,115 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" routeLink="">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="Home"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="About"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="Contact"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Contact</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Admin
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="Admin/Users/1"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Users 1</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="Admin/Users/2"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Users 2</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="Admin/Users/3"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Users 3</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="Admin/Users/4"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Users 4</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <div class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          [(ngModel)]="searchText"
+        />
+        <button
+          class="btn btn-outline-success"
+          routerLink="/Search"
+          [queryParams]="{q:searchText}"
+          type="submit">
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -16,7 +16,22 @@ import { UsersListComponent } from './Components/admin/Users/users-list/users-li
 import { FormsModule } from '@angular/forms';
 import { UserDetailsComponent } from './Components/admin/Users/user-details/user-details.component';
 import { DeleteUserConfirmComponent } from './Components/admin/Users/delete-user-confirm/delete-user-confirm.component';
-
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './Components/home/home/home.component';
+import { AboutComponent } from './Components/home/about/about.component';
+import { ContactsComponent } from './Components/home/contacts/contacts.component';
+import { NotFoundPageComponent } from './Components/not-found-page/not-found-page.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { SearchComponent } from './Components/search/search.component';
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'Home', component: HomeComponent },
+  { path: 'About', component: AboutComponent },
+  { path: 'Contact', component: ContactsComponent },
+  {path:"Search",component:SearchComponent},
+  { path: 'Admin/Users/:id', component: UsersComponent },
+  { path: '**', component: NotFoundPageComponent }, //wildcard route
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,12 +46,12 @@ import { DeleteUserConfirmComponent } from './Components/admin/Users/delete-user
     UsersListComponent,
     UserDetailsComponent,
     DeleteUserConfirmComponent,
+    NotFoundPageComponent,
+    FooterComponent,
+    SearchComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
-  providers: [SubscriptionService,UsersService],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+  providers: [SubscriptionService, UsersService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
